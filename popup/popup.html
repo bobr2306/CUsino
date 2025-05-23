@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>LMS Casino Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 200px;
+            padding: 10px;
+        }
+        .settings-section {
+            margin: 10px 0;
+        }
+        button {
+            background: #f1c40f;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h2>LMS Casino</h2>
+<p>Настройки мини-казино для вашего LMS</p>
+
+<div class="settings-section">
+    <label>
+        <input type="checkbox" id="enable-casino" checked>
+        Включить казино
+    </label>
+</div>
+
+<div class="settings-section">
+    <label>Шанс на победу (%):</label>
+    <input type="number" id="win-chance" min="1" max="100" value="50">
+</div>
+
+<button id="save-settings">Сохранить</button>
+
+<script src="popup.js"></script>
+</body>
+</html>

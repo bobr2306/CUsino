@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "LMS Casino",
+  "version": "1.0",
+  "description": "Добавляет мини-казино в интерфейс LMS вашего вуза",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://my.centraluniversity.ru/learn/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html"
+  }
+}
